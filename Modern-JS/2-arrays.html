@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in JS</title>
+</head>
+<body>
+    <script>
+    //Array
+    var emp=["raj","pooja"]
+    document.write(emp+"<br>")
+    emp.push("poonam") //adds new element at end
+    document.write(emp+"<br>")
+    emp.unshift("ajay") //adds new element at first
+    document.write(emp+"<br>")
+    emp[2]="neha"; //it removes already exists data then add new data
+    document.write(emp+"<br>")
+    
+    //By using new keyword
+    var colors=new Array();
+    colors[0]="red"
+    colors.push("green") 
+    colors.unshift("white")
+    for(i=0;i<colors.length;i++)
+    {
+        document.write(colors[i]+"<br>")
+    }
+    
+
+    //By using Array constructor
+    var fruits=new Array("banana","apple","pineapple")
+    document.write(fruits+"<br>")  
+    for(i=0;i<fruits.length;i++)
+    {
+    if(fruits[i]==="apple")
+    {
+        document.write("found"+"<br>")
+        break
+    }
+    else
+    {
+        document.write("not found"+"<br>")
+    }
+    }
+    document.write(fruits.find(x=>x==="grapes")+"<br>")
+    document.write(fruits.find(x=>x==="apple")+"<br>")
+</script>
+</body>
+</html>

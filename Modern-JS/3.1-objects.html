@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        //Array of object
+        var empdate={
+            name:"raj",
+            jobrole:"data scientist",
+            salary:80000,
+            alldata:function()
+            {
+                return this.name+" "+this.jobrole+" "+this.salary;
+            }
+        }
+        document.write(empdate['name'])
+        document.write(empdate.salary,empdate.jobrole)
+        document.write(empdate.alldata())
+    
+        var studentdata={} //OR
+        // var studentdata=Object(); //OR
+        // var studentdata=new Object(); 
+        studentdata.fname="pooja"
+        studentdata.lname="ghare"
+        studentdata.per=89.45
+        studentdata.grade="O"
+        studentdata.fullname=function()
+        {
+            return this.fname+" "+this.lname;
+        }
+        document.write(studentdata.fullname()+" "+studentdata.per+" "+studentdata.grade)
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <script>
+        //For Type-1 
+        // for(let i=1;i<=5;i++)
+        // {
+        //     document.write("Welcome<br>")
+        // }
+        //For Type-2 in
+        books=[]
+        for(let i=0;i<3;i++)
+        {
+            names=prompt("enter bookname=")
+            books.push(names)
+        }
+        for(let x in books)
+        {
+            document.write(books[x]+" "+x+"<br>")
+            
+        }
+        //For Type-3 of
+        for(let k of books)
+        {
+            document.write(k+"<br>")
+        }
+        //For Type-4 forEach
+        books.forEach(x=>{
+            document.write(x+"<br>")
+        })
+    </script>
+</body>
+</html>

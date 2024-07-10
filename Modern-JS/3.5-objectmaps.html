@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObjectMap</title>
+</head>
+<body>
+    <script>
+    // let students=new Map([
+    // ['raj',89],
+    // ['komal',80],
+    // ])
+    
+    let students=new Map();
+    students.set("raj",89);
+    students.set("komal",80);
+
+    for(x of students)
+    {
+        document.write(x+"<br>")
+    }
+name=prompt("enter name:")
+document.write("Marks of "+name+":"+students.get(name))
+</script>
+</body>
+</html>

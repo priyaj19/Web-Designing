@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Properties</title>
+</head>
+<body>
+    <script>
+        // var person={
+        //     fname:'Raj',
+        //     lname:'More',
+        //     fullname:function()
+        //     {
+        //         return this.fname+" "+this.lname;
+        //     }
+        // }
+        // document.write(person.fullname())
+
+        // var person={
+        //     fname:'Pooja',
+        //     lname:'SHah',
+        //     fullname:function()
+        //     {
+        //         return this.fname+" "+this.lname;
+        //     }
+        //     }
+        //     var p1={fname:'Raj',lname:'More'}
+        //     var p2={fname:'Komal',lname:'Shah'}
+        
+        // // document.write(person.fullname.call(p1))  //reads argument as seperately
+        // // document.write(person.fullname.apply(p2)) //reads argument as array
+        // var ans=person.fullname.bind(p1);  // borrowing given object elements 
+        // document.write(ans())
+
+        function test(arg1,arg2)
+        {
+            document.write("test:"+this.num+" "+arg1+" "+arg2+"<br>")
+        }
+        test.call({num:100},10,20)
+        
+        function test1(...args)
+        {
+            document.write("test1:"+this.num+" "+args+"<br>")
+        }
+        
+        test1.apply({num:100},[10,20,30,40],test.call({num:100},10,20))
+
+        function test2(args)
+        {
+            document.write("test2:"+this.num+" "+args)
+        }
+        var ans=test2.bind({num:100},101)
+        document.write(ans())
+
+    </script>
+</body>
+</html>

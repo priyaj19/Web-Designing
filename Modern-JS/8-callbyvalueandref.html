@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call by Value and Reference</title>
+</head>
+<body>
+    <script>
+        function callbyvalue()
+        {
+            var a=5;  //primitive datatype
+            var b=a;    //primitive datatype
+            document.write("a="+a+"<br>");  //5
+            document.write("b="+b+"<br>"); //5
+            a=8
+            document.write("updated a="+a+"<br>"); //8
+            document.write("updated b="+b+"<br>"); //5 can't update as per a because a and b are primitive
+        }
+        callbyvalue()
+
+        function callbyreference()
+        {
+            var data1={name:"raj",marks:89}  //non-primitive
+            var data2=data1;
+            document.write("Data1:"+data1.name+" "+data1.marks+"<br>") //raj 89
+            document.write("Data2:"+data2.name+" "+data2.marks+"<br>") //raj 89
+            data1.marks=99;
+            document.write("Data1:"+data1.name+" "+data1.marks+"<br>") //raj 99
+            document.write("Data2:"+data2.name+" "+data2.marks+"<br>") //raj 99  updated because it is non-primitive
+        }
+        callbyreference()
+    </script>
+</body>
+</html>

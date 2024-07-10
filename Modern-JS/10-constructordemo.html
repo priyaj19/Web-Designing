@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+ <script>
+    class Car
+    {
+        constructor(model)
+        {
+            this.carname="Ford";
+            this.model=model;
+        }
+        display=()=>
+        {
+            document.write("Car Name:"+this.carname+"<br>");
+            document.write("Car Model:"+this.model);
+        }
+    }
+    c=new Car("FordAXE");
+    c.display();
+ </script>   
+</body>
+</html>

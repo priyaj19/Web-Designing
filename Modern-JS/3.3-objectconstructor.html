@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+<body>
+    <script>
+        function Person(fname,lname,age,salary)
+        {
+            this.fname=fname;
+            this.lname=lname;
+            this.age=age;
+            this.salary=salary;
+        }
+        let p1=new Person("Pooja","Shah",23,50000)
+        let p2=new Person("Komal","Shah",22,60000)
+        document.write(p1.fname+" "+p1.lname+" "+p1.age+" "+p1.salary)
+    </script>
+</body>
+</html>

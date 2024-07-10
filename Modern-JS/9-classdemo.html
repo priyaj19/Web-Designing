@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Object</title>
+</head>
+<body>
+    <script>
+        class Bank
+        {   
+            first()    //method
+            {
+                // alert("welcome")
+                name=prompt("enter your name=")
+                document.write(name+"!!!Welcome to oop world.<br>")
+            }
+            second=function()  //anonymous
+            {
+                document.write(name+"!!!Start learning methods.<br>")
+            }
+            third=(status)=>     //arrow
+            {
+                document.write(name+"!!!You executed arrow method "+status+"<br>")
+            }
+        }
+        b=new Bank();   //object
+        b.first()
+        b.second()
+        b.third("successfully")
+    </script>
+</body>
+</html>
