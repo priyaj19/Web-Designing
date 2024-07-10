@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FETCHAPI</title>
+</head>
+<body>
+    <h1>Currency Data</h1>
+    <button onclick="show()">Show Currency rate</button>
+    <h2 id="result"></h2>
+    <script>
+        let result=document.getElementById('result')
+        function show()
+        {
+            fetch('./currency.json')
+            .then(response=>response.json())
+            // .then(data=>document.write(data))
+            .then(data=>
+                {
+                result.innerHTML+="USD rate="+data.USD+"<br>"
+                result.innerHTML+="EUR rate="+data.EUR+"<br>"
+                result.innerHTML+="INR rate="+data.INR+"<br>"
+
+                }
+            )
+        }
+    </script>
+</body>
+</html>

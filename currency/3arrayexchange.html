@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css">
+</head>
+<body>
+    <h1>Currency Converter</h1>
+        <form>
+            <label>From:</label>
+            <select id="from">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="INR">INR</option>
+            </select>   
+            <label>TO:</label>
+            <select id="to">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="INR">INR</option>
+            </select>   
+            <label>Amount To Convert</label>
+            <input type="text" id="amount">
+            <button type="button" id="convert">Convert</button><br>
+            <label>Result Amount</label>
+            <p id="result"></p>
+
+            <script>
+                const rates = {
+                    USD: {
+                        USD:1,
+                        EUR: 0.85,
+                        INR: 80.20
+                    },
+                    EUR: {
+                        EUR:1,
+                        USD: 1.18,
+                        INR: 15.86
+                    },
+                    INR: {
+                        INR:1,
+                        USD: 1.38,
+                        EUR: 1.16
+                    }
+                };
+               
+        
+                const fromCurrency = document.getElementById("from");
+                const toCurrency = document.getElementById("to");
+                const amount = document.getElementById("amount");
+                const convertButton = document.getElementById("convert");
+                const result = document.getElementById("result");
+        
+                convert.addEventListener("click", () => {
+                    const from = fromCurrency.value;
+                    const to = toCurrency.value;
+                    const conversionAmount = parseFloat(amount.value);
+        
+                    if (isNaN(conversionAmount)) {
+                        result.innerHTML = "Please enter a valid amount.";
+                        return;
+                    }
+        
+                    if (rates[from] && rates[from][to]) {
+                        const rate = rates[from][to];
+                        const convertedAmount = (conversionAmount * rate);
+                        result.innerHTML = conversionAmount+" "+from +" is equal to "+convertedAmount+" "+to;
+                    } else {
+                        result.innerHTML = "Currency conversion not available.";
+                    }
+                });
+            </script>
+        </form> 
+</body>
+</html>

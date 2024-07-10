@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+</head>
+<body>
+    <h1>Student Data</h1>
+    <button onclick="display()">Display</button>
+    <h3 id="output"></h3>
+    <script>
+        let output=document.getElementById('output')
+        function display() 
+        {
+            fetch('./data.json')
+            .then(res=>res.json())  //async method
+            .then(data=>{
+                output.innerHTML=data.studentname+" "+data.rollno+" "+data.marks;
+            })
+        }
+    </script>
+</body>
+</html>

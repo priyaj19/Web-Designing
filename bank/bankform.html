@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Demo</title>
+</head>
+
+<body>
+    <h1>My Bank Portal</h1>
+    <label>Enter UserName</label>
+    <input type="=text" id="uname" placeholder="enter user name">
+    <br><br>
+    <label>Enter Amount</label>
+    <input type="text" id="balance" placeholder="enter amount">
+    <br><br>
+    <button onclick="createacc()">Create Account</button>
+    <button onclick="creditamount()">Credit Amount</button>
+    <button onclick="debitamount()">Debit Amount</button>
+    <button onclick="showbalance()">Show Balance</button>
+    <input type="reset" value="Cancel">
+    <p id="output"></p>
+    <script>
+        var uname = document.getElementById("uname").value;
+        var balance = Number(document.getElementById("balance").value);  //global
+        var accno = 1111
+        function createacc() {
+            var newbalance = Number(document.getElementById("balance").value);
+            if (newbalance >= 1000) {
+                document.getElementById("output").innerHTML = "Welcome to our bank and your account number is 1111"
+                balance = balance + newbalance
+                console.log(balance)
+            }
+            else {
+                alert("Amount must be greater than or equal to 1000")
+            }
+        }
+
+        function creditamount() {
+            var amount = Number(document.getElementById("balance").value);
+            var newacc = prompt("enter your account number=")
+            if (newacc == accno) {
+                balance = balance + amount
+                document.getElementById("output").innerHTML = "Amount credited successfully" + balance
+
+            }
+            else {
+                alert("Account Number Incorrect")
+            }
+        }
+
+        function debitamount() {
+            var amount = Number(document.getElementById("balance").value);
+            var newacc = prompt("enter your account number=")
+            if (newacc == accno) {
+                balance = balance - amount
+                document.getElementById("output").innerHTML = "Amount debited successfully" + balance
+
+
+            }
+            else {
+                alert("Account Number Incorrect")
+            }
+        }
+
+    </script>
+</body>
+
+</html>

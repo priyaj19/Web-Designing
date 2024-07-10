@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange</title>
+</head>
+<body>
+    <h1>Currency Exchange Calculator</h1>
+    <form id="calculate">
+        <label>From Currency:</label>
+        <select id="fromcurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+        </select>
+
+        <label>To Currency:</label>
+        <select id="tocurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+        </select>
+        <br><br>
+        <label>Amount:</label>
+        <input type="number" id="amount">
+        <br><br>
+        <input type="submit" value="Convert">
+    </form>
+        <br><br>
+        <h2 id="result"></h2>
+    <script>
+      const form = document.getElementById('calculate');
+      form.addEventListener('submit',function()
+      {
+            event.preventDefault();
+            const fromcurrency=document.getElementById('fromcurrency').value;
+            const tocurrency=document.getElementById('tocurrency').value;
+            const amount=Number(document.getElementById('amount').value);
+            const result=document.getElementById('result')
+            let rate;
+            if(fromcurrency=="USD" && tocurrency=="USD")
+            {
+                rate=1;
+            }
+            else if(fromcurrency=="USD" && tocurrency=="EUR")
+            {
+                rate=80.34;
+            }
+            else if(fromcurrency=="USD" && tocurrency=="INR")
+            {
+                rate=80;
+            }
+            else if(fromcurrency=="EUR" && tocurrency=="EUR")
+            {
+                rate=1;
+            }
+            else if(fromcurrency=="EUR" && tocurrency=="USD")
+            {
+                rate=0.34;
+            }
+            else if(fromcurrency=="EUR" && tocurrency=="INR")
+            {
+                rate=40.2;
+            }
+            else if(fromcurrency=="INR" && tocurrency=="INR")
+            {
+                rate=1;
+            }
+            else if(fromcurrency=="INR" && tocurrency=="USD")
+            {
+                rate=0.08;
+            }
+            else if(fromcurrency=="INR" && tocurrency=="EUR")
+            {
+                rate=0.4;
+            }
+            else
+            {
+                result.innerHTML="Conversion not available";
+            }
+
+            const answer=amount*rate
+            result.innerHTML=amount+" "+fromcurrency+" is equal to"+answer+" "+tocurrency;
+            console.log(answer)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+    "studentname":"jay",
+    "roll no":12,
+    "marks":420
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Portal</title>
+</head>
+<body>
+    <h1>Quiz Competition</h1>
+    <label>Q.1 SQL is Case-Sensitive Language</label>
+    <br>
+    <input type="radio" id="q1true" name="q1" value="true">
+    <label for="q1true">True</label>
+    <input type="radio" id="q1false" name="q1" value="false">
+    <label for="q1false">False</label>
+    <br><br>
+    <label>Q.2 Python is markup language</label>
+    <br>
+    <input type="radio" id="q2true" name="q2" value="true">
+    <label for="q2true">True</label>
+    <input type="radio" id="q2false" name="q2" value="false">
+    <label for="q2false">False</label>
+    <br><br>
+    <input type="button" value="Submit" onclick="calculateScore()">
+    <input type="button" value="Cancel">
+    <p id="result"></p>
+
+    <script>
+        function calculateScore() {
+            var score = 0;
+
+            var q1SelectedValue = document.getElementById("q1false").checked;
+            var q2SelectedValue = document.getElementById("q2false").checked;
+
+            if (q1SelectedValue) 
+            {
+                score=score+1;
+            }
+
+            if (q2SelectedValue) 
+            {
+                score=score+1;
+            }
+
+            document.getElementById('result').innerHTML = "Your Score: " + score;
+        }
+    </script>
+</body>
+</html>
