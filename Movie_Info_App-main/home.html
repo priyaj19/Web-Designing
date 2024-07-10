@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MovieInfo</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <div class="container">
+            
+            <div id="branding">
+                <h1 onclick="home()"><span>Movie</span>Info</h1>
+                <br>
+                <p id="website-info">Explore movie details, including plot, ratings, and cast information. Your go-to platform for all things cinema!</p>  
+            </div>
+        </div>
+    </header>
+
+
+    <!--Navbar-->
+
+    <nav>
+        <ul>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </nav>
+
+
+
+    <!--search bar-->
+        <div class="searchbar">
+            <div class="search-container">
+                <form action="">
+                    <input  type="text" placeholder=" Search Movie" class="inputBox">
+                    <button type="submit" class="Btn">Search</button>
+                    <button type='reset' class="Btn">Reset</button>
+                </form>
+            </div>
+        </div>
+    
+
+    <!--Main-->
+    <main>
+        <section>
+            <div class="movie-container noBackground">               
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <p>
+            &copy; MovieInfo
+        </p>
+    </footer>
+
+    <script src="homescript.js"></script>
+</body>
+
+</html>

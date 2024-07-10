@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playpen Sans', cursive;
+}
+
+
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e7d6f5;
+}
+
+header {
+    background-color: #360c5d;
+    color: #f5f5f5;
+    padding: 5px;
+    text-align: left;
+}
+
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+#branding {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+#branding h1 {
+    cursor: grab;
+}
+
+
+#branding span {
+    color: #02b3e4;
+}
+
+#form-container {
+    background: #fff;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0000001a;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+}
+
+.form-group button {
+    background-color: #360c5d;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#create-account-link,
+#login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#create-account-link a,
+#login-link a {
+    color: rgb(54, 12, 93);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+nav ul {
+    list-style: none;
+    background-color: #bbb9b9;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    margin: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    color: rgb(54, 12, 93);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav ul li :hover {
+    color: #763092
+}
+
+.searchbar {
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px;
+    border: none;
+}
+
+.search-container input {
+    width: 30%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+input[type=text]:focus {
+    color: rgb(54, 12, 93)
+}
+
+.search-container button {
+    background: #763092;
+    padding: 10px;
+    border: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.search-container button:hover {
+    background: #9645b7;
+}
+
+
+main {
+    margin-inline: auto;
+    padding-block: 5%;
+    margin-bottom: 25px;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-container {
+    display: flex;
+    background: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    width: 80%;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.movie-poster img {
+    height: 450px;
+    margin-right: 30px;
+    border-radius: 5px 0 5px;
+}
+
+.movie-info {
+    padding-inline: 15px;
+}
+
+.movie-info h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0 12px 0;
+}
+
+.movie-info h2+p {
+    text-align: center;
+}
+
+.movie-info .movie-genre {
+    display: flex;
+    justify-content: center;
+    margin-block: 5px;
+    overflow-x: auto;
+}
+
+.movie-info .movie-genre p {
+    background: #232f3e;
+    color: #fff;
+    padding: 5px 14px;
+    margin-inline: 5px;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.movie-info p {
+    font-size: 18px;
+    margin-block: 18px;
+    line-height: 24px;
+}
+
+.movie-container.noBackground {
+    background: none;
+    box-shadow: none;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+    margin-top: 10px;
+    padding-block: 5px;
+    background-color: #360c5d;
+    color: #f5f5f5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+
+/* Responsive Code */
+@media screen and (max-width:950px) {
+
+
+    .movie-container {
+        flex-direction: column;
+    }
+
+    .movie-poster img {
+        width: 100%;
+        height: fit-content;
+        margin-right: 0;
+    }
+
+    .movie-info {
+        padding-inline: 30px;
+    }
+}
